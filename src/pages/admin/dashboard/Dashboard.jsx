@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Layout from "../../../components/layout/Layout";
 import { FaUserTie } from "react-icons/fa";
 import myContext from "../../../context/data/myContext";
+import DashboardTab from "./DashboardTab";
 
 const Dashboard = () => {
   const context = useContext(myContext);
@@ -125,6 +126,7 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
+        <DashboardTab/>
       </section>
     </Layout>
   );
