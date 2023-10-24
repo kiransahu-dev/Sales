@@ -1,7 +1,17 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 
-const Modal = () => {
+const Modal = ({
+  name,
+  address,
+  pincode,
+  phoneNumber,
+  setName,
+  setAddress,
+  setPincode,
+  setPhoneNumber,
+  buyNow,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const closeModal = () => {
@@ -63,6 +73,8 @@ const Modal = () => {
                                 Enter Full Name
                               </label>
                               <input
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
                                 type="name"
                                 name="name"
                                 id="name"
@@ -78,6 +90,8 @@ const Modal = () => {
                                 Enter Full Address
                               </label>
                               <input
+                                value={address}
+                                onChange={(e) => setAddress(e.target.value)}
                                 type="text"
                                 name="address"
                                 id="address"
@@ -93,6 +107,8 @@ const Modal = () => {
                                 Enter Pincode
                               </label>
                               <input
+                                value={pincode}
+                                onChange={(e) => setPincode(e.target.value)}
                                 type="text"
                                 name="pincode"
                                 id="pincode"
@@ -108,6 +124,8 @@ const Modal = () => {
                                 Enter Mobile Number
                               </label>
                               <input
+                                value={phoneNumber}
+                                onChange={(e) => setPhoneNumber(e.target.value)}
                                 type="text"
                                 name="mobileNumber"
                                 id="mobileNumber"
@@ -117,9 +135,12 @@ const Modal = () => {
                             </div>
                           </form>
                           <button
-                            onClick={closeModal}
+                            onClick={() => {
+                              buyNow();
+                              closeModal();
+                            }}
                             type="button"
-                            className="focus:outline-none w-full text-white bg-violet-600  hover:bg-violet-800  outline-0 font-medium rounded-lg text-sm px-5 py-2.5 "
+                            className="focus:outline-none w-full text-white bg-violet-600 hover:bg-violet-800  outline-0 font-medium rounded-lg text-sm px-5 py-2.5 "
                           >
                             Order Now
                           </button>
