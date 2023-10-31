@@ -272,7 +272,7 @@ const Navbar = () => {
                     </span>
                   </a>
                 </div>
-                <div className="hidden lg:ml-8 lg:flex">
+                <Link to={"/login"} className="hidden lg:ml-8 lg:flex">
                   <a href="#" className="flex items-center text-gray-700 ">
                     <img
                       className="inline-block w-10 h-10 rounded-full"
@@ -280,7 +280,7 @@ const Navbar = () => {
                       alt="Dan_Abromov"
                     />
                   </a>
-                </div>
+                </Link>
 
                 {/* Search */}
                 <div className="flex lg:ml-6">
