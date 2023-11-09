@@ -117,7 +117,7 @@ const Navbar = () => {
                   )}
                   <div className="flow-root">
                     <Link
-                      to={"/"}
+                      to={"/login"}
                       className="-m-2 block p-2 font-medium text-gray-900 cursor-pointer"
                     >
                       <img
